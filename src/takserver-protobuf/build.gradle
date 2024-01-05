@@ -12,6 +12,7 @@ dependencies {
   api group: 'io.perfmark', name: 'perfmark-api', version: perfmark_api_version
 
   implementation group: 'javax.annotation', name: 'javax.annotation-api', version: annotation_api_version
+  implementation group: 'com.google.protobuf', name: 'protobuf-java', version: protobuf_java_version
 
   // gRPC
   api (group: 'io.grpc', name: 'grpc-netty', version: grpc_version) {
