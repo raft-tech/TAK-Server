@@ -12,6 +12,7 @@ dependencies {
   api group: 'io.perfmark', name: 'perfmark-api', version: perfmark_api_version
 
   implementation group: 'javax.annotation', name: 'javax.annotation-api', version: annotation_api_version
+  implementation group: 'com.google.protobuf', name: 'protobuf-java', version: protobuf_java_version
 
   // gRPC
   api (group: 'io.grpc', name: 'grpc-netty', version: grpc_version) {
@@ -41,11 +42,11 @@ dependencies {
 // protobuf code generation step
 protobuf {
   protoc {
-    artifact = 'com.google.protobuf:protoc:3.0.0'
+    artifact = 'com.google.protobuf:protoc:' + protobuf_java_version
   }
   plugins {
     grpc {
-      artifact = 'io.grpc:protoc-gen-grpc-java:1.0.2'
+      artifact = 'io.grpc:protoc-gen-grpc-java:' + grpc_version
     }
   }
   generateProtoTasks {
